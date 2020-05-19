@@ -1,0 +1,19 @@
+begin
+i = 0;
+j = 0;
+k = 0;
+s = 0;
+while(i<5) do
+    j = 0;
+    while(j<5) do
+        k = 0;
+        while(k<5) do
+            s = s + 1;
+            write(s);
+            k = k + 1;
+        endwhile
+        j = j + 1;
+    endwhile
+    i = i + 1;
+endwhile
+end;
