@@ -1,0 +1,45 @@
+decl
+int a,b;
+int bubble(int a,int b,int c);
+int bubble();
+int fun(int c);
+enddecl
+
+int bubble(int a,int b,int c)
+{
+	decl
+	int g;
+	enddecl
+	if ( a>c ) then
+		g = a;
+	else
+		g = c;
+	endif;
+	if(g < c) then
+		g = c;
+	endif ;
+	return (g);
+}
+int fun(int d)
+{
+	decl
+	int c;
+	int e;
+	enddecl
+	a = c - 2;
+	return (c);
+}
+
+int main()
+{
+	decl
+	int s;
+	char e;
+	int c,d;
+	enddecl
+	read(a);
+	c = a + 3;
+	s = bubble(fun(a),a,c);
+	write(s);
+	return (0);
+}
