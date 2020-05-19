@@ -1,0 +1,12 @@
+
+
+decl
+	int n,*i,j;
+	char k,l;
+enddecl
+begin
+n = 10;
+i = &n;
+*i = 20;
+write(n);
+end;

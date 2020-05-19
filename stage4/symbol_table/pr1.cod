@@ -1,0 +1,14 @@
+decl
+    int num1,num[10],num2;
+    char str,str1[10];
+enddecl
+begin
+read(str1[0]);
+read(num[7]);
+num2 = 0;
+while(num2 < num[7]) do
+    write(num2);
+    write(str1[0]);
+    num2 = num2 + 1;
+endwhile
+end;
