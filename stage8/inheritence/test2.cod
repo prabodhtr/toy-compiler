@@ -1,0 +1,97 @@
+
+	class
+	Person{
+	decl
+	char name;
+	int age;
+	int printDetails();
+	char findName();
+	int createPerson(char name, int age);
+	enddecl
+	int printDetails(){
+	decl
+	enddecl
+	begin
+	write(self.name);
+	write(self.age);
+	return 1;
+	end
+	}
+	char findName(){
+	decl
+	enddecl
+	begin
+	return self.name;
+	end
+	}
+	int createPerson(char name, int age){
+	decl
+	enddecl
+	begin
+	self.name=name;
+	self.age=age;
+	return 1;
+	end
+	}
+	}
+	Student extends Person{
+	
+	decl
+	int rollnumber;
+	char dept;
+	int printDetails();
+	int createStudent(char name, int age,int rollNo, char dept);
+	enddecl
+	int createStudent(char name, int age,int rollNo, char dept){
+	decl
+	enddecl
+	begin
+	self.name =name;
+	self.age = age;
+	self.rollnumber = rollNo;
+	self.dept = dept;
+	return 1;
+	end
+	}
+	int printDetails(){
+	decl
+	enddecl
+	begin
+	write(self.name);
+	write(self.age);
+	write(self.rollnumber);
+	write(self.dept);
+	return 1;
+	end
+	}
+	}
+	endclass
+	
+	decl
+	int n,temp;
+	char name;
+	Person first;
+	Student second;
+	Person arbitrary;
+	enddecl
+	
+	int main(){
+	decl
+	enddecl
+	begin
+	Heapset();
+	first=new(Person);
+	temp = first.createPerson("Rogers", 37);
+	second=new(Student);
+	temp = second.createStudent("Mathew", 35, 999, "CS");
+	read(n);
+	if (n>0) then
+	arbitrary = first;
+	else
+	arbitrary = second;
+	endif;
+	n = arbitrary.printDetails();
+	return 0;
+	end
+	}
+	
