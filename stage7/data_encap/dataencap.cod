@@ -1,0 +1,65 @@
+type
+	mylist{
+		int roll;
+		char name;
+		char classdiv;
+		char division;
+		mylist my;
+	}
+endtype
+decl
+int a,b;
+mylist first;
+int bubble(int a,int b,int c);
+int fun(int c);
+enddecl
+
+int bubble(int a,int b,int c)
+{
+	decl
+	int g;
+	enddecl
+	if ( a>c ) then
+		g = a;
+	else
+		g = c;
+	endif;
+	if(g < c) then
+		g = c;
+	endif ;
+	return (g);
+}
+int fun(int d)
+{
+	decl
+	int c;
+	int e;
+	enddecl
+	c = a * 2 + 1;
+	return (c);
+}
+
+int main()
+{
+	decl
+	int s;
+	mylist third;
+	char e;
+	int c,d;
+	enddecl
+	breakpoint;
+	Heapset();
+	breakpoint;
+	first = Alloc();
+	breakpoint;
+	read(a);
+	first.my.classdiv = "a";
+	breakpoint;
+	c = a + 3;
+	s = bubble(fun(a),a,c);
+	write(first.my.classdiv);
+	Free(first);
+	first = Alloc();
+	first.classdiv = "a";
+	return (0);
+}
